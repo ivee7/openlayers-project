@@ -7,7 +7,7 @@
             class="mb-20"
             @update:model-value="handleSearchText"
         />
-        <div v-if="STATUSES.SUCCESS">
+        <div v-if="status === STATUSES.SUCCESS">
             <div class="mb-20">
                 <label>
                     <checkbox
@@ -38,11 +38,6 @@
                 </template>
             </virtual-scroller>
         </div>
-        <stub-generator
-            v-else
-            :status="status"
-            @retry="requestPoints"
-        />
     </section>
 </template>
 
@@ -52,10 +47,8 @@ import VirtualScroller from 'primevue/virtualscroller';
 import InputText from 'primevue/inputtext';
 import Checkbox from 'primevue/checkbox';
 import { usePointsPageStore } from '../../store';
-import StubGenerator from '@ol-entities/stub-generator/StubGenerator.vue';
 import { STATUSES } from '@ol-utils/statuses';
 import PointsCard from './components/points-card/PointsCard.vue';
-import point from '@/shared/api/point';
 
 const cardHeight = 60;
 
@@ -76,7 +69,6 @@ const {
     togglePointStatus,
     handleSearchText,
     activate,
-    requestPoints,
 } = store;
 </script>
 
