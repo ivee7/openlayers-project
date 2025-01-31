@@ -1,0 +1,68 @@
+$indents: (
+  0: 0,
+  4: 4px,
+  8: 8px,
+  12: 12px,
+  16: 16px,
+  20: 20px,
+  24: 24px,
+  28: 28px,
+  32: 32px,
+);
+
+@each $size, $value in $indents {
+  /* Margins */
+  .m-#{$size} {
+    margin: $value;
+  }
+
+  .mt-#{$size},
+  .my-#{$size} {
+    margin-top: $value;
+  }
+
+  .mb-#{$size},
+  .my-#{$size} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$size},
+  .mx-#{$size} {
+    margin-left: $value;
+  }
+
+  .mr-#{$size},
+  .mx-#{$size} {
+    margin-right: $value;
+  }
+
+  /* Paddings */
+  .p-#{$size} {
+    padding: $value;
+  }
+
+  .pt-#{$size},
+  .py-#{$size} {
+    padding-top: $value;
+  }
+
+  .pb-#{$size},
+  .py-#{$size} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$size},
+  .px-#{$size} {
+    padding-left: $value;
+  }
+
+  .pr-#{$size},
+  .px-#{$size} {
+    padding-right: $value;
+  }
+}
+
+.d-flex-acntr {
+  display: flex;
+  align-items: center;
+}
