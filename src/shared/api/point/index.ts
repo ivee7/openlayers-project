@@ -8,7 +8,7 @@ class PointAPI {
     async fetchPoints() {
         const features: Array<PointDTO> = [];
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 10000; i++) {
             const x = -getRandomNumber(50, 50);
             const y = getRandomNumber(10, 50);
             const code = `${x}:${y}`;
